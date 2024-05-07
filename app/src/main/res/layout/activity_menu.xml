@@ -6,4 +6,94 @@
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
 
+    <!-- 툴바 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#70C5B2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="김건강 님 (만 24세)"
+        app:titleTextColor="#FFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="190dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 복약 기록 버튼 -->
+        <ImageButton
+            android:id="@+id/imageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btn1">
+        </ImageButton>
+
+        <!-- 혈당 기록 버튼 -->
+        <ImageButton
+            android:id="@+id/imageBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btn2">
+        </ImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="360dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 체중 기록 버튼 -->
+        <ImageButton
+            android:id="@+id/imageBtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btn3">
+        </ImageButton>
+
+        <!-- 건강 기록 버튼 -->
+        <ImageButton
+            android:id="@+id/imageBtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btn4">
+        </ImageButton>
+
+    </LinearLayout>
+
+    <!-- floating 버튼 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/float_logo"
+        app:backgroundTint="#D4EFE8"
+        app:fabCustomSize="95dp"
+        app:maxImageSize="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
