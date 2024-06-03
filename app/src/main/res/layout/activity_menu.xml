@@ -82,7 +82,7 @@
 
     <!-- floating 버튼 -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating"
+        android:id="@+id/floatingBtn"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginBottom="40dp"
