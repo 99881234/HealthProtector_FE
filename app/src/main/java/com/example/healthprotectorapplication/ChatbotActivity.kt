@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -24,6 +25,14 @@ class ChatbotActivity : AppCompatActivity() {
         messageEditText = findViewById(R.id.message_edit_text)
         sendButton = findViewById(R.id.send_btn)
 
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(R.drawable.navigation_icon) // 뒤로가기 버튼 아이콘 설정
+        }
+
         messageAdapter = MessageAdapter(messageList)
         recyclerView.adapter = messageAdapter
         val llm = LinearLayoutManager(this)
@@ -35,6 +44,11 @@ class ChatbotActivity : AppCompatActivity() {
             addToChat(question, Message.SENT_BY_ME)
             messageEditText.setText("")
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun addToChat(message: String, sentBy: String) {

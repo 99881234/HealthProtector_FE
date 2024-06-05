@@ -14,7 +14,7 @@
             android:layout_height="80dp"
             android:background="#70C5B2"
             android:elevation="4dp"
-            app:title="챗봇"
+            app:title="건강 레포트"
             app:titleTextColor="#FFFFFF" />
 
         <LinearLayout
@@ -135,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/recycler_view" />
+
         </LinearLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
